@@ -4168,7 +4168,29 @@ input, select, textarea {
 	margin: 1;
 }
 
+
 .skill-list li {
+	background-color: transparent;
+	border: 1px solid white;
+	border-radius: 10px;
+	padding: 5px 10px;
+	font-size: 14px;
+	font-weight: bold;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+.skill-list-right {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: right;
+	gap: 10px;
+	list-style: none;
+	padding: 0;
+	margin: 1;
+}
+
+.skill-list-right li {
 	background-color: transparent;
 	border: 1px solid white;
 	border-radius: 10px;
