@@ -4200,3 +4200,14 @@ input, select, textarea {
 	text-transform: uppercase;
 	letter-spacing: 1px;
 }
+
+.link-list {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: left;
+	gap: 40px;
+	list-style: none;
+	padding: 0;
+	margin: 1;
+}
+
