@@ -45,8 +45,9 @@
 	// Scroll reveal.
 		var $revealLeft = $('#header h1, #two .inner'),
 			$revealRight = $('#one .inner, #three .inner'),
-			$revealUp = $('#four .inner'),
-			$revealAll = $revealLeft.add($revealRight).add($revealUp);
+			$revealUp = $('#four .inner, #banner .inner'),
+			$revealAll = $revealLeft.add($revealRight).add($revealUp),
+			$revealEarly = $('#two .inner, #three .inner');
 
 		$revealLeft.addClass('reveal-left');
 		$revealRight.addClass('reveal-right');
@@ -56,6 +57,23 @@
 		$revealAll.scrollex({
 			mode: 'middle',
 			top: '-10vh',
+			bottom: '-10vh',
+			enter: function() {
+				$(this).removeClass('is-inactive');
+			},
+			leave: function() {
+				$(this).addClass('is-inactive');
+			}
+		});
+		$window.on('scroll', function() {
+			if ($window.scrollTop() <= 0) {
+				$('#one .inner').removeClass('is-inactive');
+			}
+		});
+
+		$revealEarly.scrollex({
+			mode: 'top',
+			top: '0vh',
 			bottom: '-10vh',
 			enter: function() {
 				$(this).removeClass('is-inactive');

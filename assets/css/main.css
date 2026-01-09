@@ -3683,7 +3683,7 @@ input, select, textarea {
 		}
 
 		.wrapper .inner {
-			padding: 3em 0 1em 0 ;
+			padding: 2.2em 0 0.8em 0 ;
 			margin: 0 auto;
 			width: 55em;
 		}
@@ -4422,7 +4422,7 @@ button:hover {
 .reveal-up {
 	opacity: 1;
 	transform: translateZ(0);
-	transition: opacity 0.6s ease, transform 0.6s ease;
+	transition: opacity 0.35s ease, transform 0.35s ease;
 }
 
 .reveal-left.is-inactive {
@@ -4444,6 +4444,86 @@ button:hover {
 	.reveal-left.is-inactive,
 	.reveal-right.is-inactive {
 		transform: translateY(20px);
+	}
+}
+
+/* Compact section spacing */
+#banner {
+	padding: 7em 0 4.5em 0;
+}
+
+.wrapper {
+	margin: 3.5em 0;
+}
+
+.wrapper:before,
+.wrapper:after {
+	height: 3.5em;
+}
+
+.wrapper:before {
+	top: -3.5em;
+}
+
+.wrapper:after {
+	bottom: -3.5em;
+}
+
+.wrapper .inner {
+	padding: 2em 0 0.6em 0;
+}
+
+@media screen and (max-width: 980px) {
+	#banner {
+		padding: 8.5em 3em 5.5em 3em;
+	}
+
+	.wrapper {
+		margin: 3.75em 0;
+	}
+
+	.wrapper:before,
+	.wrapper:after {
+		height: 3.75em;
+	}
+
+	.wrapper:before {
+		top: -3.75em;
+	}
+
+	.wrapper:after {
+		bottom: -3.75em;
+	}
+
+	.wrapper .inner {
+		padding: 2em 3em 0.6em 3em;
+	}
+}
+
+@media screen and (max-width: 736px) {
+	#banner {
+		padding: 4.5em 2em 3em 2em;
+	}
+
+	.wrapper {
+		margin: 2.25em 0;
+	}
+
+	.wrapper:before,
+	.wrapper:after {
+		height: 2.25em;
+	}
+
+	.wrapper:before {
+		top: -2.25em;
+	}
+
+	.wrapper:after {
+		bottom: -2.25em;
+	}
+
+	.wrapper .inner {
+		padding: 1.75em 2em 0.4em 2em;
 	}
 }
 
