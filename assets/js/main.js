@@ -42,6 +42,29 @@
 
 		}
 
+	// Scroll reveal.
+		var $revealLeft = $('#header h1, #two .inner'),
+			$revealRight = $('#one .inner, #three .inner'),
+			$revealUp = $('#four .inner'),
+			$revealAll = $revealLeft.add($revealRight).add($revealUp);
+
+		$revealLeft.addClass('reveal-left');
+		$revealRight.addClass('reveal-right');
+		$revealUp.addClass('reveal-up');
+		$revealAll.addClass('is-inactive');
+
+		$revealAll.scrollex({
+			mode: 'middle',
+			top: '-10vh',
+			bottom: '-10vh',
+			enter: function() {
+				$(this).removeClass('is-inactive');
+			},
+			leave: function() {
+				$(this).addClass('is-inactive');
+			}
+		});
+
 	// Menu.
 		var $menu = $('#menu');
 
